@@ -1,0 +1,16 @@
+
+  <p *ngIf=!load>загрузка...</p>
+  <div *ngIf="load">
+    <div>
+    <mat-card class="card">
+      <mat-card-header class="card_Header"> {{ NewsContent.title }}</mat-card-header>
+      <button class="btn_home" routerLink="/">на главную</button>
+    </mat-card>
+  </div>
+  <div>
+    <P class="Comment_Text">  Комменарии</P>
+    <div>
+      <app-commentList [comments]="NewsContent.children"></app-commentList>
+    </div>
+  </div>
+  </div>

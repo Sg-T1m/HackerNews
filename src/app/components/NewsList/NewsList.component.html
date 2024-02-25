@@ -1,0 +1,18 @@
+<p *ngIf="!loader">загрузка</p>
+
+<mat-grid-list cols="2" rowHeight="2:1" *ngIf="loader">
+  <mat-grid-tile *ngFor="let news of NewsList">
+    <mat-card class="example-card">
+      <mat-card-header> {{ news.title }}</mat-card-header>
+      <mat-card-content class="card-Conetnt">
+        <p>Коментариев: {{ news.num_comments }}</p>
+        <p>Рейтинг: {{ news.points }}</p>
+
+        <p><a target="_blank" href="{{ news.url }}"> Ссылка на новость </a></p>
+        <p>
+          <a [routerLink]="['NewsMore',  news.story_id ]"> Комменарии</a>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

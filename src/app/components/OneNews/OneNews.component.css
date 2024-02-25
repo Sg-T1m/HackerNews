@@ -1,0 +1,15 @@
+.card_Header{
+    font-size: 25px;
+    height: 50px;
+}
+.Comment_Text{
+    margin-top: 10px;
+    font-size: 25px;
+
+}
+.btn_home{
+    background-color: blue;
+    height: 50px;
+    color: white;
+    font-size: 30px;
+}
